@@ -1,0 +1,47 @@
+# ---------------------------------------------------------------------------
+# Proprietary game content — must NEVER be committed (see ADR-0002)
+# ---------------------------------------------------------------------------
+*.ds2res
+*.ds2map
+*.ds2world
+*.ds2party
+*.ds2save
+*.dsres
+*.dsmap
+*.tank
+*.exe
+*.dll
+*.asi
+*.m3d
+*.bik
+*.iso
+
+# Extracted/converted assets (formats observed inside Tanks)
+*.asp
+*.prs
+*.raw
+*.sno
+*.dds
+
+# Local research workspace: extracted content, scan output, dumps.
+# Put derived-but-proprietary material here; commit only summaries.
+/local/
+/extracted/
+/scratch/
+re-sieged-*-dump.txt
+
+# Windows device-name accident (seen in earlier WSL work)
+NUL
+
+# ---------------------------------------------------------------------------
+# Editors / OS
+# ---------------------------------------------------------------------------
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Agent local state
+.claude/settings.local.json
