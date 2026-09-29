@@ -21,6 +21,8 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - Leak prevention rules H10–H13: secrets, private terms (name/email; list kept
   outside the repo), personal paths, and noreply-only commit identities. Every
   outgoing commit is scanned, not just the final diff.
+- Recorded rule: every code change ships with tests, and code merges need a gate
+  review team (roster pending).
 - Staged PR handover plan (`docs/process/pr-handover.md`) and PR template.
 - `.gitattributes` forcing LF line endings for hooks and scripts, so they work on Windows.
 - `.gitignore` that blocks proprietary game formats and local research output.
