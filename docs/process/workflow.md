@@ -52,15 +52,15 @@ architectural point: *single source of truth, multiple enforcement points*.
    `.git\info\resieged-private-terms` inside your clone. It is inside `.git`,
    so it is never committed. For CI, add the same lines as a repository secret
    named `RESIEGED_PRIVATE_TERMS` (Settings → Secrets and variables → Actions).
-4. **Turn on GitHub secret scanning + push protection** (H10 backstop):
-   Settings → Advanced Security (or *Code security*) → enable **Secret
-   Protection** and **Push protection**. Free for public repositories.
-5. **Protect `main` on GitHub:** Settings → Branches → Add rule for `main`:
-   - Require a pull request before merging
-   - Require status checks to pass → select **Repository policy / policy**
-   - Do not allow force pushes or deletions
-
-   Until you do this, CI reports problems but cannot block a merge.
+4. **GitHub secret scanning (optional backstop).** GitHub scans public
+   repositories for known token formats automatically. The settings page for
+   it moves between GitHub UI versions and was not found on this account
+   (2026-09-29), so H10 is the primary secret check and this step is optional.
+5. **Protect `main` with a ruleset** (done 2026-09-29): Settings → Rules →
+   Rulesets → New branch ruleset. Name `protect-main`, **Active**, empty bypass
+   list, target the default branch. Rules: restrict deletions, block force
+   pushes, require a PR (0 approvals, conversation resolution, *Merge* only),
+   require the **policy** status check with up-to-date branches.
 
 ## Day-to-day flow
 

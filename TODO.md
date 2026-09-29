@@ -7,10 +7,10 @@ research workstreams see [docs/research/plan.md](docs/research/plan.md).
 - [x] Agent roster and hierarchy: [docs/process/agent-team.md](docs/process/agent-team.md)
 - [x] Workflow rules and hooks: [docs/process/workflow.md](docs/process/workflow.md)
 - [x] AI disclosure: [AI-DISCLOSURE.md](AI-DISCLOSURE.md)
-- [ ] Protect `main` with a ruleset ([how](docs/process/workflow.md#one-time-setup-you))
-- [ ] Noreply commit email, private-terms list, GitHub secret scanning ([how](docs/process/workflow.md#one-time-setup-you))
-- [ ] Enable git hooks in `C:\Dev\Re-Sieged`: `git config core.hooksPath .githooks`
-- [ ] Decide on the personal email in the first `main` commit (keep or rewrite)
+- [x] Protect `main` with a ruleset
+- [x] Noreply email in GitHub settings, `RESIEGED_PRIVATE_TERMS` secret
+- [ ] Windows PC: Python, git hooks, noreply `user.email`, private-terms file ([how](docs/process/workflow.md#one-time-setup-you))
+- [x] Personal email in the first `main` commit: **kept** (Project Lead decision 2026-09-29; noreply enforced from now on by H13)
 - [ ] Review and merge the first PR (PR handover stage 1)
 - [ ] Define the gate review team (from existing project agent rosters + Re-Sieged gaps)
 - [ ] Accept or revise ADR-0001 and ADR-0002
