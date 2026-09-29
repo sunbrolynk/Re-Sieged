@@ -88,6 +88,9 @@ will be chosen by Phase 3 evidence.
 
 ## Product targets (unchanged; guide research priorities, not architecture)
 
+**First target platform: Windows** (Project Lead decision, 2026-09-29). Linux,
+Steam Deck and handhelds remain goals, and must not be designed out.
+
 Modern renderer · 4K/ultrawide/high refresh · resolution-independent UI ·
 **native controller-first interaction** (not rebinding) · Steam Deck/Linux ·
 x86 handhelds · better frame pacing · modern saves/settings/audio/loading ·

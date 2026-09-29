@@ -72,12 +72,16 @@ user explicitly asks otherwise:
 
 ## Environments
 
-- **Linux/WSL/cloud:** static analysis, scripting, documentation. There is no
-  game install here unless the user provides one.
-- **Native Windows (`C:\Dev\Re-Sieged`):** runtime observation, performed by
-  the Project Lead using protocols from the Runtime Observer. Use black-box
-  methods only: no patching, injection, hooks, or memory modification
-  (see [research plan](docs/research/plan.md)).
+- **Native Windows (`C:\Dev\Re-Sieged`) is the primary environment** for all
+  work: static analysis against the local game install, scripts, and runtime
+  observation. Runtime observation is performed by the Project Lead using
+  protocols from the Runtime Observer, with black-box methods only: no patching,
+  injection, hooks, or memory modification (see [research plan](docs/research/plan.md)).
+- **WSL is no longer used** (decision 2026-09-29).
+- **Cloud sessions** (Claude Code on the web) have no game files. Use them
+  for documentation, planning, and repository tooling only.
+- Scripts must run on Windows: Python 3, `pathlib` paths, and no bash-only
+  tooling for anything research depends on.
 
 ## Working conventions
 

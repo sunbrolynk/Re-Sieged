@@ -17,8 +17,8 @@ Phase 4 architecture rests on evidence.
 
 | Environment | Use for | Notes |
 | --- | --- | --- |
-| Linux / WSL / cloud | Static analysis, scripts, docs | Needs a path to the user's install; the cloud sandbox has no game files |
-| Native Windows | Runtime observation, save diffs, loaded-module checks | WSL→Windows interop failed before (`UtilBindVsockAnyPort`). That is an environment limitation |
+| **Native Windows** (primary) | Static analysis against the local install, scripts, runtime observation, save diffs | Windows is the first target platform. Earlier WSL→Windows interop failures (`UtilBindVsockAnyPort`) were an environment limitation; WSL is no longer used |
+| Cloud (Claude Code on the web) | Docs, planning, repository tooling | No game files available |
 
 ## Workstreams
 

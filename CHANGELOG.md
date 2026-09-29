@@ -19,11 +19,14 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
   through three layers: Claude Code hooks (`.claude/settings.json`), git hooks
   (`.githooks/`) and CI (`.github/workflows/policy.yml`).
 - Staged PR handover plan (`docs/process/pr-handover.md`) and PR template.
+- `.gitattributes` forcing LF line endings for hooks and scripts, so they work on Windows.
 - `.gitignore` that blocks proprietary game formats and local research output.
 
 ### Changed
 - Moved `.claude/AGENTS.md` to the repository root under the tool-neutral name.
   `CLAUDE.md` imports it.
+- Native Windows is the primary environment and the first target platform;
+  WSL is no longer used.
 - Codex is no longer part of the project. Runtime observation is done by the
   project lead using Runtime Observer protocols.
 

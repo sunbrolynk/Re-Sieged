@@ -30,7 +30,7 @@ architectural point: *single source of truth, multiple enforcement points*.
 
 ## One-time setup (you)
 
-1. **Enable git hooks in each clone** (WSL and Windows):
+1. **Enable git hooks in your clone** (`C:\Dev\Re-Sieged`):
    ```sh
    git config core.hooksPath .githooks
    ```
