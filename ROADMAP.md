@@ -80,7 +80,8 @@ model at the import boundary, and project license. Each gets an ADR.
 
 ## Phase 5: Implementation scaffold
 
-Build system, CI, first vertical slice. The likely first slice is to
+Build system, CI with a test runner, gate review team active, first vertical slice.
+Every code change ships with tests. The likely first slice is to
 load one actor from a user-supplied install and show it animating. The slice
 will be chosen by Phase 3 evidence.
 

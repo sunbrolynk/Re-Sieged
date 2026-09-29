@@ -29,6 +29,14 @@ user explicitly asks otherwise:
 - Adding a directory needs a reason. Only create one when you have real content
   to put in it.
 
+## When building starts (Phase 5+)
+
+- **Every code change ships with tests.** New behavior gets a test that would
+  fail without it. A bug fix gets a test that reproduces the bug first. Tests
+  use synthetic fixtures, never game files (ADR-0002).
+- Code merges only after the **gate review team** has reviewed it. The roster
+  is being defined (see [agent-team.md](docs/process/agent-team.md#gate-review-team-to-be-defined)).
+
 ## Hard rules
 
 1. **Never commit proprietary content.** That includes game executables, DLLs,
