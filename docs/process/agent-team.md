@@ -62,8 +62,8 @@ Architect · Security Reviewer · Platform/Renderer · Input/UX (controller-firs
 ## Gate review team (to be defined)
 
 Required before any code is merged, from Phase 5 on (Project Lead decision,
-2026-09-29). The roster will be chosen from the agent teams already used in the
-Project Lead's other projects, and then extended with Re-Sieged-specific gaps.
+2026-09-29). Draft roster, pipeline and goal ownership:
+[gate-team-proposal.md](gate-team-proposal.md) (Proposed).
 Testing is mandatory for all code (see [AGENTS.md](../../AGENTS.md)).
 
 ## Standard flow for a finding

@@ -23,6 +23,7 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
   outgoing commit is scanned, not just the final diff.
 - Recorded rule: every code change ships with tests, and code merges need a gate
   review team (roster pending).
+- Gate review team proposal with goal ownership (`docs/process/gate-team-proposal.md`).
 - Staged PR handover plan (`docs/process/pr-handover.md`) and PR template.
 - `.gitattributes` forcing LF line endings for hooks and scripts, so they work on Windows.
 - `.gitignore` that blocks proprietary game formats and local research output.
