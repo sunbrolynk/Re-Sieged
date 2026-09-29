@@ -22,4 +22,8 @@ jobs:
         with:
           python-version: "3.12"
       - name: Run policy checks
+        env:
+          # H11: your private terms (real name, personal email...), stored as a
+          # repository secret so they never appear in the repo. Logs never echo them.
+          RESIEGED_PRIVATE_TERMS: ${{ secrets.RESIEGED_PRIVATE_TERMS }}
         run: python tools/checks/policy.py ci --base "origin/${{ github.base_ref || 'main' }}"

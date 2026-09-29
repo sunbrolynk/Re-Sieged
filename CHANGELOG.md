@@ -15,9 +15,12 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - `AI-DISCLOSURE.md`.
 - Five-role agent team with hierarchy (`docs/process/agent-team.md`) and
   subagent definitions in `.claude/agents/`.
-- Repository policy rules H1–H9, enforced by one script (`tools/checks/policy.py`)
+- Repository policy rules H1–H13, enforced by one script (`tools/checks/policy.py`)
   through three layers: Claude Code hooks (`.claude/settings.json`), git hooks
   (`.githooks/`) and CI (`.github/workflows/policy.yml`).
+- Leak prevention rules H10–H13: secrets, private terms (name/email; list kept
+  outside the repo), personal paths, and noreply-only commit identities. Every
+  outgoing commit is scanned, not just the final diff.
 - Staged PR handover plan (`docs/process/pr-handover.md`) and PR template.
 - `.gitattributes` forcing LF line endings for hooks and scripts, so they work on Windows.
 - `.gitignore` that blocks proprietary game formats and local research output.

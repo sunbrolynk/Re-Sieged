@@ -10,7 +10,7 @@ This file is the single source of rules for AI agents in this repository.
   The main session is the **Orchestrator**. Subagents live in `.claude/agents/`.
 - Findings go Researcher/Runtime Observer → **Evidence Auditor** → **Provenance
   Guard** → Orchestrator commits. Never skip the reviews for research content.
-- Branch, commit, and push rules (H1–H9) are enforced by hooks:
+- Branch, commit, and push rules (H1–H13) are enforced by hooks:
   [docs/process/workflow.md](docs/process/workflow.md). If a hook blocks you,
   fix the cause or raise it with the Project Lead. Never bypass it.
 - Pull requests follow the staged handover in
@@ -41,7 +41,11 @@ user explicitly asks otherwise:
 3. **No code from another project** without a provenance entry in
    [docs/research/ecosystem.md](docs/research/ecosystem.md) (source, license,
    version/commit, how it was modified).
-4. **No legal conclusions.** You may record legal *questions* and *precedents*,
+4. **No secrets or personal information.** No credentials or tokens, no
+   personal paths (write `C:\Users\<you>`), and never the Project Lead's real
+   name or personal email. Rules H10–H13 enforce this. Never ask to see or
+   print the private-terms list.
+5. **No legal conclusions.** You may record legal *questions* and *precedents*,
    but do not state that something is legal.
 
 ## Evidence discipline

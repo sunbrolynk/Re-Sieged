@@ -30,6 +30,18 @@
 /scratch/
 re-sieged-*-dump.txt
 
+# Secrets: never committed (rule H10)
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.pfx
+*.p12
+id_rsa*
+id_ed25519*
+credentials.json
+
 # Windows device-name accident (seen in earlier WSL work)
 NUL
 

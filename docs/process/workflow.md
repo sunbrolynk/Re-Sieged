@@ -15,6 +15,13 @@
 | H7 | Accepted ADRs are superseded, not edited | Git · CI (warning) |
 | H8 | `CHANGELOG.md` is updated when `docs/` or `tools/` change | CI (warning) |
 | H9 | Relative Markdown links resolve | CI (warning) |
+| H10 | No secrets: API keys and tokens (GitHub, AWS, Anthropic, OpenAI, Slack, Google, Stripe), private keys, JWTs, passwords in URLs, `key = "..."` assignments, and secret-holding files (`.env`, `*.pem`, `*.key`, `id_rsa`, …) | Claude · Git · CI (+ GitHub push protection) |
+| H11 | No **private terms**: your real name, personal email, anything else on your private list. The list itself lives outside the repo | Claude · Git · CI |
+| H12 | No personal paths that expose an OS user name; write `C:\Users\<you>` instead | Claude · Git · CI |
+| H13 | Commit author/committer emails must be noreply addresses | Git · CI (+ GitHub email privacy) |
+
+H10–H13 scan **every commit** being pushed or reviewed, not only the final
+diff. A secret that was added and then deleted still lives in git history.
 
 ## Why three layers
 
@@ -36,7 +43,19 @@ architectural point: *single source of truth, multiple enforcement points*.
    ```
    Claude sessions do this automatically through the SessionStart hook.
    Requires Python 3 on the PATH.
-2. **Protect `main` on GitHub:** Settings → Branches → Add rule for `main`:
+2. **Use your GitHub noreply email for commits** (H13). GitHub → Settings →
+   Emails → tick *Keep my email addresses private* and *Block command line
+   pushes that expose my email*. Copy the `…@users.noreply.github.com` address
+   shown there, then run: `git config --global user.email "<that address>"`
+3. **Create your private-terms list** (H11). One term per line: your real name,
+   personal email, anything else that must never appear. Save it as
+   `.git\info\resieged-private-terms` inside your clone. It is inside `.git`,
+   so it is never committed. For CI, add the same lines as a repository secret
+   named `RESIEGED_PRIVATE_TERMS` (Settings → Secrets and variables → Actions).
+4. **Turn on GitHub secret scanning + push protection** (H10 backstop):
+   Settings → Advanced Security (or *Code security*) → enable **Secret
+   Protection** and **Push protection**. Free for public repositories.
+5. **Protect `main` on GitHub:** Settings → Branches → Add rule for `main`:
    - Require a pull request before merging
    - Require status checks to pass → select **Repository policy / policy**
    - Do not allow force pushes or deletions
