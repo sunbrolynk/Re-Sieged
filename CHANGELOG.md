@@ -12,13 +12,20 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
   (repository content policy).
 - Archived the original Codex research handoff unedited in `docs/handoff/`.
 - Content for README, ROADMAP, TODO, CONTRIBUTING and agent instructions.
-- Draft `AI-DISCLOSURE.md`.
-- Draft planning proposals: agent team/hierarchy and workflow/hooks (`docs/planning/`).
+- `AI-DISCLOSURE.md`.
+- Five-role agent team with hierarchy (`docs/process/agent-team.md`) and
+  subagent definitions in `.claude/agents/`.
+- Repository policy rules H1–H9, enforced by one script (`tools/checks/policy.py`)
+  through three layers: Claude Code hooks (`.claude/settings.json`), git hooks
+  (`.githooks/`) and CI (`.github/workflows/policy.yml`).
+- Staged PR handover plan (`docs/process/pr-handover.md`) and PR template.
 - `.gitignore` that blocks proprietary game formats and local research output.
 
 ### Changed
-- Moved `.claude/AGENTS.md` to the repository root so Codex can find it.
-  `CLAUDE.md` now imports it, so both agents follow one set of rules.
+- Moved `.claude/AGENTS.md` to the repository root under the tool-neutral name.
+  `CLAUDE.md` imports it.
+- Codex is no longer part of the project. Runtime observation is done by the
+  project lead using Runtime Observer protocols.
 
 ## 0.0.0 - Initial scaffold
 - Empty placeholder files (`70c9f84`).

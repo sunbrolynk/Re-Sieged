@@ -19,9 +19,8 @@ extracted assets (models, textures, audio, video, maps), bulk extracted
 GAS/Skrit, ISOs, leaked or proprietary source, or unrelated proprietary
 content.
 
-Enforcement: `.gitignore` is the first line of defense. Future commit hooks and
-CI checks are proposed in
-[docs/planning/workflow-and-hooks.md](../planning/workflow-and-hooks.md).
+Enforcement: `.gitignore` is the convenience layer. Claude hooks, git hooks and
+CI enforce rules H1–H3 ([workflow](../process/workflow.md)).
 
 ## Consequences
 

@@ -37,7 +37,11 @@ Scripts that scan a local game install must:
 - be deterministic, so someone else with the same game version gets the same
   result.
 
-## Commits
+## Commits and pushes
 
-`<Area>: <imperative summary>`. Areas: `Docs`, `Research`, `Decision`, `Tools`,
-`Repo`.
+First, once per clone: `git config core.hooksPath .githooks` (requires Python 3).
+
+Subject format: `<Area>: <imperative summary>`. Areas: `Docs`, `Research`,
+`Decision`, `Tools`, `Repo`, `Planning`, `Process`. Never push to `main`; open a
+pull request. The full rules and the reasons for them are in
+[docs/process/workflow.md](docs/process/workflow.md).

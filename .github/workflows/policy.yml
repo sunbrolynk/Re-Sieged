@@ -1,0 +1,25 @@
+name: Repository policy
+
+# Backstop for the local hooks: runs the same tools/checks/policy.py on
+# everything that reaches GitHub, so rules hold even if a hook was skipped.
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  policy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # full history: commit messages and handoff diffs need it
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Run policy checks
+        run: python tools/checks/policy.py ci --base "origin/${{ github.base_ref || 'main' }}"

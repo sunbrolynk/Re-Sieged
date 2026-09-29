@@ -1,8 +1,21 @@
-# Agent instructions (Claude, Codex, and others)
+# Agent instructions
 
 This file is the single source of rules for AI agents in this repository.
-`CLAUDE.md` imports it. It lives at the repository root because that is where
-Codex looks for it.
+`CLAUDE.md` imports it. It lives at the root under the tool-neutral
+`AGENTS.md` name, so any future agent tool finds the same rules.
+
+## Team and process
+
+- You work inside a defined team: [docs/process/agent-team.md](docs/process/agent-team.md).
+  The main session is the **Orchestrator**. Subagents live in `.claude/agents/`.
+- Findings go Researcher/Runtime Observer → **Evidence Auditor** → **Provenance
+  Guard** → Orchestrator commits. Never skip the reviews for research content.
+- Branch, commit, and push rules (H1–H9) are enforced by hooks:
+  [docs/process/workflow.md](docs/process/workflow.md). If a hook blocks you,
+  fix the cause or raise it with the Project Lead. Never bypass it.
+- Pull requests follow the staged handover in
+  [docs/process/pr-handover.md](docs/process/pr-handover.md). Check the current
+  stage before opening or drafting a PR.
 
 ## Project phase
 
@@ -61,13 +74,15 @@ user explicitly asks otherwise:
 
 - **Linux/WSL/cloud:** static analysis, scripting, documentation. There is no
   game install here unless the user provides one.
-- **Native Windows (`C:\Dev\Re-Sieged`):** runtime observation only. Use
-  black-box methods: no patching, injection, hooks, or memory modification
+- **Native Windows (`C:\Dev\Re-Sieged`):** runtime observation, performed by
+  the Project Lead using protocols from the Runtime Observer. Use black-box
+  methods only: no patching, injection, hooks, or memory modification
   (see [research plan](docs/research/plan.md)).
 
 ## Working conventions
 
-- Commit messages: `<Area>: <imperative summary>` (e.g. `Research: Add Tank header evidence record`).
+- Commit messages: `<Area>: <imperative summary>` (e.g. `Research: Add Tank header evidence record`),
+  plus a `Co-Authored-By:` trailer on AI-made commits.
 - Update `CHANGELOG.md` under *Unreleased* for notable documentation or process
   changes.
 - Keep `docs/handoff/` files unedited. They are historical. Put corrections in
@@ -79,8 +94,3 @@ Your own trained "knowledge" of DS2 internals is **not evidence**. Any such
 claim needs an observation-backed evidence record. See
 [AI-DISCLOSURE.md](AI-DISCLOSURE.md).
 
-## Planning drafts (not yet in force)
-
-The agent roster and hierarchy ([docs/planning/agent-team.md](docs/planning/agent-team.md))
-and the enforcement hooks ([docs/planning/workflow-and-hooks.md](docs/planning/workflow-and-hooks.md))
-are proposals. Do not implement them until they are accepted.

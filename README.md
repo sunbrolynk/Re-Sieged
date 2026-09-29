@@ -33,8 +33,9 @@ See [ADR-0001](docs/decisions/0001-research-before-architecture.md).
 | [`docs/research/`](docs/research/README.md) | Research method, claims register, open questions, plan |
 | [`docs/decisions/`](docs/decisions/README.md) | Architecture/process decision records (the "why") |
 | [`docs/handoff/`](docs/handoff/) | Original research dossiers, kept unedited as history |
-| [`docs/planning/`](docs/planning/) | Draft proposals: agent team, workflow & hooks |
-| [`AGENTS.md`](AGENTS.md) | Rules for AI agents (Claude, Codex) working in this repo |
+| [`docs/process/`](docs/process/) | Agent team, workflow rules & hooks, PR handover |
+| [`tools/checks/`](tools/checks/policy.py) | Repository policy checks (used by Claude hooks, git hooks and CI) |
+| [`AGENTS.md`](AGENTS.md) | Rules for AI agents working in this repo |
 | [`AI-DISCLOSURE.md`](AI-DISCLOSURE.md) | How AI is used, and the clean-room safeguards |
 
 ## What this repository will never contain

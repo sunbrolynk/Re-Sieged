@@ -1,6 +1,6 @@
 # AI Disclosure
 
-> **Status: draft.** To be finalized by the project lead.
+> **Status:** Active. Last reviewed 2026-09-29.
 
 Re-Sieged is developed with substantial help from AI tools. We state this
 openly because it affects how contributors, players and rights holders should
@@ -10,14 +10,18 @@ judge the project's work, especially its clean-room claims.
 
 | Tool | Used for |
 | --- | --- |
-| Anthropic Claude (via Claude Code) | Research analysis, documentation, planning, analysis scripts |
-| OpenAI Codex | Static archaeology (WSL), native Windows environment setup and runtime observation |
+| Anthropic Claude (via Claude Code) | Research analysis, documentation, planning, analysis scripts, repository tooling. Current tool. |
+| OpenAI Codex | **Past use only** (before 2026-09-29): static archaeology in WSL and Windows environment setup, summarized in `docs/handoff/`. No longer used. |
 
 We will update this list whenever the set of tools changes.
 
 ## What AI does and does not do here
 
-- AI agents draft research notes, scripts, and documentation.
+- AI agents draft research notes, scripts, and documentation, working as a
+  defined team with separate producer and reviewer roles
+  ([agent team](docs/process/agent-team.md)).
+- Runtime observation of the game is performed by the human project lead,
+  not by AI.
 - **A human project lead** directs the work, reviews it, and makes every final
   decision: phase gates, architecture decisions, licensing, and merges to `main`.
 - AI output is **not trusted by default**. It goes through the same evidence
@@ -41,7 +45,8 @@ reaching Re-Sieged:
 ## Attribution
 
 Commits written with AI assistance carry a `Co-Authored-By:` trailer that names
-the tool. Pull requests created by an AI agent say so in their description.
+the tool. The git hooks and CI enforce this for Claude sessions (rule H5). Every
+pull request has an *AI involvement* section saying who wrote what.
 
 ## Questions
 

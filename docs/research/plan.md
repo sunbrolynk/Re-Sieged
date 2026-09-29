@@ -40,6 +40,10 @@ Phase 4 architecture rests on evidence.
 
 ### WS-2: Runtime observation (Phase 2, native Windows)
 
+The Project Lead plays the game. The `runtime-observer` agent writes each
+protocol beforehand and analyzes the captures afterwards
+([team](../process/agent-team.md)).
+
 Allowed: normal play, screenshots/video, save inspection, passive process
 observation (e.g. loaded modules), controlled input.
 Not allowed in this phase: patching, injection, hooks, trainers, memory
