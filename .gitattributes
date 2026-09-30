@@ -1,0 +1,14 @@
+# Normalize text files in the repository.
+* text=auto
+
+# Hooks and scripts must keep LF endings. With CRLF, Git for Windows fails on
+# "#!/bin/sh\r" and the hooks stop working silently.
+.githooks/* text eol=lf
+*.sh        text eol=lf
+*.py        text eol=lf
+*.yml       text eol=lf
+
+# Windows-native scripts keep CRLF.
+*.ps1 text eol=crlf
+*.bat text eol=crlf
+*.cmd text eol=crlf
