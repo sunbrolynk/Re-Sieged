@@ -23,6 +23,12 @@ them up as draft evidence records.
 5. Return: the draft path, the claims it affects, the confidence you propose and
    why, and what you did **not** check.
 
+## Before using any external source
+Check the **Never-use sources** list in docs/research/ecosystem.md. Never open,
+clone, quote or rely on anything on it. When you clone a repository for facts,
+do not read directories holding third-party proprietary material (e.g. `gpg/`,
+GameSpy SDK files); say exactly what you read; and delete the clone when done.
+
 ## You must not
 - commit, push, or change a claim's confidence in the register (the Evidence
   Auditor reviews first, the Orchestrator applies);
