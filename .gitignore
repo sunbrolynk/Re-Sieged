@@ -65,3 +65,7 @@ desktop.ini
 
 # Local hand-over bundles for the Project Lead
 /handover/
+
+# Python bytecode caches (created when the policy hooks or research tests run)
+__pycache__/
+*.pyc
